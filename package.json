@@ -1,0 +1,20 @@
+{
+  "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
+  "dependencies": {
+    "lastejobb": "^1.13.4",
+    "polygon-lookup": "^2.5.0"
+  },
+  "description": "",
+  "homepage": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "naturvern-kart-lastejobb",
+  "scripts": {
+    "build": "node index.js",
+    "publish": "echo dummy publish",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
