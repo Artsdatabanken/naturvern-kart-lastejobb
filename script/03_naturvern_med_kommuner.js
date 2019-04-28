@@ -22,7 +22,7 @@ if (treff < total)
   log.info(`${total - treff} områder ligger utenfor alle kommuner`);
 
 io.skrivBuildfil("naturvernområde_i_kommune.json", r);
-io.skrivBuildfil("naturvernområde_4326.geojson", vo);
+io.skrivDatafil("naturvernområde_4326.geojson", vo);
 
 function finnOverlappendeKommuner(geometry) {
   let nater = geometry.coordinates;
