@@ -8,18 +8,21 @@ const vo = io.lesDatafil("naturvern.geojson");
 
 let treff = 0;
 manglerKommune = [];
+const r = [];
 
 vo.features.forEach(v => {
+  v.properties = { id: v.properties.ident_lokalid };
   const kommuner = finnOverlappendeKommuner(v.geometry);
   if (kommuner.length <= 0) manglerKommune.push(v.properties.ident_lokalid);
-  v.properties.kommuner = kommuner;
+  r.push({ lokal_id: v.properties.ident_lokalid, kommuner: kommuner });
 });
 
 const total = Object.keys(vo).length;
 if (treff < total)
   log.info(`${total - treff} områder ligger utenfor alle kommuner`);
 
-io.skrivDatafil(__filename, vo);
+io.skrivBuildfil("naturvernområde_i_kommune.json", r);
+io.skrivBuildfil("naturvernområde_4326.geojson", vo);
 
 function finnOverlappendeKommuner(geometry) {
   let nater = geometry.coordinates;
