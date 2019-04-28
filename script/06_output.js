@@ -8,28 +8,13 @@ function map(srcPath, navn) {
   geo.features.forEach(f => {
     f.geometry.coordinates = reducePrecision(
       f.geometry.coordinates,
-      geo.crs && geo.crs.name
+      geo.crs && geo.crs.properties && geo.crs.properties.name
     );
   });
-  geo.features.sort((a, b) =>
-    a.properties.kommunenummer > b.properties.kommunenummer ? 1 : -1
-  );
+  geo.features.sort((a, b) => (a.properties.id > b.properties.id ? 1 : -1));
   const dstPath = navn + ".geojson";
   io.skrivBuildfil(dstPath, geo);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function mapNavn(navn) {
   return navn.reduce((acc, n) => {

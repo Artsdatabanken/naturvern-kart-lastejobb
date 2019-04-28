@@ -4,8 +4,10 @@ const { io, log } = require("lastejobb");
 const kommuner = io.lesDatafil("kommune.geojson");
 var lookup = new PolygonLookup(kommuner);
 
-const vo = io.lesDatafil("naturvern.geojson");
-
+let vo = io.lesDatafil("naturvern.geojson");
+vo.features = vo.features.filter(
+  x => x.properties.objekttype === "Naturvernområde"
+);
 let treff = 0;
 manglerKommune = [];
 const r = [];
