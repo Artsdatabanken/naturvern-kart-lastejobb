@@ -14,5 +14,7 @@ simplify(
 );
 
 function simplify(src, target, tolerance) {
-  execSync(`ogr2ogr -simplify ${tolerance} data/${target} data/${src}`);
+  execSync(
+    `ogr2ogr -f GeoJSON -simplify ${tolerance} data/${target} data/${src}`
+  );
 }
