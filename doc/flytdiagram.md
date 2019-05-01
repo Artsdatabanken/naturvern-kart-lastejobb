@@ -30,10 +30,10 @@ graph LR;
     click wikidata "https://www.wikidata.org/wiki/Q15284" "_"
     click mdir "https://www.mdir.no" "_"
 
-class naturvern-lastejobb focus
+class naturvern-kart-lastejobb focus
 class kommune,wikidata,mdir data
 class naturvern,naturvern-kart, utdata
-class xnaturvern-lastejobb,naturvern-kart-lastejobb lastejobb
+class naturvern-lastejobb,xnaturvern-kart-lastejobb lastejobb
 class nin-data-lastejobb next
 classDef focusx stroke:#888,stroke-width:3px,font-weight:600;
 classDef focus color:#000,fill:#ffdede,stroke:#888,stroke-widthx:3px,font-weight:600;
