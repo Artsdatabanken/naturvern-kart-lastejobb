@@ -5,7 +5,7 @@ const verneområder = vo.features.filter(
   x => x.properties.objekttype === "Naturvernområde"
 );
 
-vo.features = verneområder.reduce((acc, vo) => {
+const voo = verneområder.reduce((acc, vo) => {
   const key = vo.properties.ident_lokalid;
   if (!acc[key]) {
     acc[key] = vo;
@@ -15,5 +15,7 @@ vo.features = verneområder.reduce((acc, vo) => {
   geom.coordinates = [...geom.coordinates, ...vo.geometry.coordinates];
   return acc;
 }, {});
+
+vo.features = json.objectToArray(voo);
 
 io.skrivDatafil("naturvernområde_4326.geojson", vo);
