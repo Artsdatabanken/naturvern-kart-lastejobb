@@ -11,12 +11,11 @@ vo.features = vo.features.filter(
 let treff = 0;
 manglerKommune = [];
 const r = [];
-
 vo.features.forEach(v => {
   v.properties = { id: v.properties.ident_lokalid };
   const kommuner = finnOverlappendeKommuner(v.geometry);
   if (kommuner.length <= 0) manglerKommune.push(v.properties.ident_lokalid);
-  r.push({ lokal_id: v.properties.ident_lokalid, kommuner: kommuner });
+  r.push({ id: v.properties.id, kommuner: kommuner });
 });
 
 const total = Object.keys(vo).length;
