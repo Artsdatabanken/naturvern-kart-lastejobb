@@ -6,19 +6,17 @@ graph LR;
       kommune[kommune]
       kommune-kart[kommune-kart]
       wikidata[Wikidata]
-      mdir[Miljødirektoratet kart/meta]
+      mdir[Miljødirektoratet]
     end
       naturvern-kart-lastejobb(naturvern-kart-lastejobb)
       naturvern-lastejobb(naturvern-lastejobb)
-    subgraph Utdatasett
-      naturvern-kart[naturvern-kart]
-      naturvern[naturvern]
-    end
+    naturvern-kart[naturvern-kart]
+    naturvern[naturvern]
     wikidata-->|SPARQL|naturvern-lastejobb;
     kommune-->|SPARQL|naturvern-lastejobb;
-    mdir-->|GeoJSON|naturvern-lastejobb;
-    mdir-->|GeoJSON|naturvern-kart-lastejobb;
-    naturvern-kart-lastejobb-->|GeoJSON|naturvern-kart;
+    mdir-->|GeoJSON egenskaper|naturvern-lastejobb;
+    mdir-->|GeoJSON geometri|naturvern-kart-lastejobb;
+    naturvern-kart-lastejobb-->|GeoJSON, JSON|naturvern-kart;
     naturvern-kart-->|JSON|naturvern-lastejobb;
     naturvern-lastejobb-->|JSON|naturvern;
     kommune-kart-->|GeoJSON|naturvern-kart-lastejobb(naturvern-kart-lastejobb);
