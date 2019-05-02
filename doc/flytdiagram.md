@@ -1,11 +1,12 @@
 ```mermaid
 
-graph TB;
+graph LR;
   linkStyle default interpolate monotoneX
     subgraph Inndata
+      kommune[kommune]
       kommune-kart[kommune-kart]
-      wikidata[Wikidata - metadata]
-      mdir[Miljødirektoratet - kart og metadata]
+      wikidata[Wikidata]
+      mdir[Miljødirektoratet kart/meta]
     end
       naturvern-kart-lastejobb(naturvern-kart-lastejobb)
       naturvern-lastejobb(naturvern-lastejobb)
@@ -14,14 +15,15 @@ graph TB;
       naturvern[naturvern]
     end
     wikidata-->|SPARQL|naturvern-lastejobb;
+    kommune-->|SPARQL|naturvern-lastejobb;
     mdir-->|GeoJSON|naturvern-lastejobb;
     mdir-->|GeoJSON|naturvern-kart-lastejobb;
     naturvern-kart-lastejobb-->|GeoJSON|naturvern-kart;
+    naturvern-kart-->|JSON|naturvern-lastejobb;
     naturvern-lastejobb-->|JSON|naturvern;
     kommune-kart-->|GeoJSON|naturvern-kart-lastejobb(naturvern-kart-lastejobb);
     naturvern-->nin-data-lastejobb(nin-data-lastejobb);
     naturvern-kart-->nin-data-lastejobb(nin-data-lastejobb);
-    naturvern-kart-->naturvern-lastejobb(naturvern-lastejobb);
     click naturvern-lastejobb "https://github.com/Artsdatabanken/naturvern-lastejobb" "_"
     click naturvern "https://github.com/Artsdatabanken/naturvern" "_"
     click naturvern-kart "https://github.com/Artsdatabanken/naturvern-kart" "_"
