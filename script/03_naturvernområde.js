@@ -1,12 +1,16 @@
 const { io, json } = require("lastejobb");
 
 let vo = io.lesDatafil("naturvern.geojson");
-const verneområder = vo.features.filter(
+let verneområder = vo.features.filter(
   x => x.properties.objekttype === "Naturvernområde"
 );
+verneområder = verneområder.map(vo => {
+  vo.properties = { id: vo.properties.ident_lokalid };
+  return vo;
+});
 
 const voo = verneområder.reduce((acc, vo) => {
-  const key = vo.properties.ident_lokalid;
+  const key = vo.properties.id;
   if (!acc[key]) {
     acc[key] = vo;
     return acc;

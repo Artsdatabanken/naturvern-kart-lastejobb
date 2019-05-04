@@ -1,7 +1,7 @@
 const { io } = require("lastejobb");
 
-map("naturvernområde_4326.geojson", "naturvernområde_4326");
-map("naturvernområde_25833.geojson", "naturvernområde_25833");
+map("naturvernområde_4326_simple.geojson", "naturvernområde_4326");
+map("naturvernområde_25833_simple.geojson", "naturvernområde_25833");
 
 function map(srcPath, navn) {
   const geo = io.lesDatafil(srcPath);
@@ -16,13 +16,7 @@ function map(srcPath, navn) {
   io.skrivBuildfil(dstPath, geo);
 }
 
-function mapNavn(navn) {
-  return navn.reduce((acc, n) => {
-    // https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
-    acc[n.sprak] = n.navn;
-    return acc;
-  }, {});
-}
+// https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
 
 function reducePrecision(coords, crs) {
   return coords.map(c => {
