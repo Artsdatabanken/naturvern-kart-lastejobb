@@ -1,5 +1,5 @@
 var PolygonLookup = require("polygon-lookup");
-const { geospatial, io, log, json } = require("lastejobb");
+const { geospatial, io, log } = require("lastejobb");
 
 const kommuner = io.lesDatafil("kommune.geojson");
 var lookup = new PolygonLookup(kommuner);
@@ -33,7 +33,7 @@ function finnOverlappendeKommuner(geometry) {
     const punkt = nater[i];
     var poly = lookup.search(punkt[0], punkt[1]);
     if (poly) {
-      const kommunenummer = poly.properties.kommunenummer;
+      const kommunenummer = poly.properties.autorkode;
       hits[kommunenummer] = 1;
       treff++;
     }
