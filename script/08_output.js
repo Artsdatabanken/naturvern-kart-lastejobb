@@ -10,6 +10,7 @@ function map(srcPath, navn) {
       f.geometry.coordinates,
       geo.crs && geo.crs.properties && geo.crs.properties.name
     );
+    f.properties.code = "VV-" + parseInt(f.properties.id.substring(2));
   });
   geo.features.sort((a, b) => (a.properties.id > b.properties.id ? 1 : -1));
   const dstPath = navn + ".geojson";
