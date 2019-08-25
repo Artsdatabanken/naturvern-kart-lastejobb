@@ -14,6 +14,7 @@
     "build": "node index.js",
     "publish": "echo dummy publish",
     "start": "node index.js",
+    "deploy": "./script/deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"
