@@ -1,4 +1,3 @@
-const { io } = require("lastejobb");
 const execSync = require("child_process").execSync;
 
 reproject("naturvernområde_4326.geojson", "naturvernområde_25833.geojson");
