@@ -35,7 +35,7 @@ Datasettet som er resultatet av lastejobben havner i repo [naturvern-kart](https
 
 ### Download
 
-```
+```bash
 npm run download
 ```
 
@@ -43,7 +43,7 @@ Laster ned eksterne avhengigheter som lastejobben er avhengig av for å produser
 
 ### Transform
 
-```
+```bash
 npm run transform
 ```
 
@@ -53,7 +53,7 @@ Sluttproduktet av transform skrives som en konvensjon til katalogen `build`.
 
 ### Build
 
-```
+```bash
 npm run build
 ```
 
@@ -62,4 +62,3 @@ Kjører hele lastejobben, først `download`, så `transform`.
 ### Deploy
 
 Tar filene fra `build`-katalogen som er produsert i `build` eller `tranform` og publiserer disse offentlig slik at andre lastejobber eller konsumenter kan nå dem uten å kjøre lastejobben.
-
