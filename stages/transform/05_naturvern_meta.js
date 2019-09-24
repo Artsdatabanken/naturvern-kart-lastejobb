@@ -12,10 +12,13 @@ let r = {};
 vo.features.forEach(v => {
   v.properties = { id: v.properties.id };
   const kommuner = finnOverlappendeKommuner(v.geometry);
+  const fylker = finnFylker(kommuner);
+  if (fylker.length != 1)
+    log.warn(v.properties.id + " ligger ikke i bare ett fylke: " + fylker);
   if (kommuner.length <= 0) manglerKommune.push(v.properties.id);
   const areal = Math.round(geospatial.calculateArea(v.geometry.coordinates));
   const bbox = geospatial.axisAlignedBoundingBox(v.geometry.coordinates);
-  r[v.properties.id] = { id: v.properties.id, kommuner, areal, bbox };
+  r[v.properties.id] = { id: v.properties.id, kommuner, fylker, areal, bbox };
 });
 
 const total = Object.keys(vo).length;
@@ -32,11 +35,18 @@ function finnOverlappendeKommuner(geometry) {
   for (var i = 0; i < nater.length; i++) {
     const punkt = nater[i];
     var poly = lookup.search(punkt[0], punkt[1]);
-    if (poly) {
-      const kommunenummer = poly.properties.autorkode;
-      hits[kommunenummer] = 1;
-      treff++;
-    }
+    if (!poly) continue;
+    const kommunenummer = poly.properties.autorkode;
+    hits[kommunenummer] = 1;
+    treff++;
   }
   return Object.keys(hits);
+}
+
+function finnFylker(kommuner) {
+  const fylker = kommuner.reduce((acc, k) => {
+    acc[k.substring(0, 2)] = true;
+    return acc;
+  }, {});
+  return Object.keys(fylker);
 }
