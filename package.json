@@ -1,7 +1,7 @@
 {
   "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
   "dependencies": {
-    "lastejobb": "^2.7.5",
+    "lastejobb": "^2.8.0",
     "polygon-lookup": "^2.5.0"
   },
   "description": "",
