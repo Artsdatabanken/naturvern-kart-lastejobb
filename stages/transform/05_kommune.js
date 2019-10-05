@@ -13,8 +13,6 @@ vo.features.forEach(v => {
   v.properties = { id: v.properties.id };
   const kommuner = finnOverlappendeKommuner(v.geometry);
   const fylker = finnFylker(kommuner);
-  if (fylker.length != 1)
-    log.warn(v.properties.id + " ligger ikke i bare ett fylke: " + fylker);
   if (kommuner.length <= 0) manglerKommune.push(v.properties.id);
   const areal = Math.round(geospatial.calculateArea(v.geometry.coordinates));
   const bbox = geospatial.axisAlignedBoundingBox(v.geometry.coordinates);
