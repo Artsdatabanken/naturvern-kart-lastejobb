@@ -1,4 +1,3 @@
-const { io } = require("lastejobb");
 const execSync = require("child_process").execSync;
 
 simplify(
