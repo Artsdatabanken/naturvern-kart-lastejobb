@@ -1,7 +1,7 @@
 {
   "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
   "dependencies": {
-    "lastejobb": "^2.8.0",
+    "lastejobb": "^2.10.3",
     "polygon-lookup": "^2.5.0"
   },
   "description": "",
@@ -15,7 +15,7 @@
     "transform": "node index transform",
     "build": "npm run download && npm run transform",
     "test": "node node_modules/.bin/jest",
-    "deploy": "./scripts/deploy.sh"
+    "deploy": "node index deploy"
   },
   "version": "1.0.0"
 }
