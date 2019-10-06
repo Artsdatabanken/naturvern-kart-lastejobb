@@ -1,11 +1,14 @@
 const { io, json } = require("lastejobb");
 
 let vo = io.lesDatafil("naturvern.geojson");
-let verneområder = vo.features.filter(
-  x => x.properties.objekttype === "Naturvernområde"
-);
+let verneområder = vo.features;
+if (vo.features.length < 2500)
+  throw new Error(
+    "Nedlastet fil mangler data, har bare " + verneområder.length + " områder"
+  );
 verneområder = verneområder.map(vo => {
-  vo.properties = { id: vo.properties.ident_lokalid };
+  vo.properties = { id: vo.properties.naturvernId };
+  delete vo.id;
   return vo;
 });
 

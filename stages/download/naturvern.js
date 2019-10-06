@@ -1,11 +1,9 @@
-const { http, log } = require("lastejobb");
+const { log } = require("lastejobb");
+const execSync = require("child_process").execSync;
 
-http
-  .downloadBinary(
-    "https://data.test.artsdatabanken.no/Naturvernområde/Geonorge_Naturvernområder_4326.geojson",
-    `naturvern.geojson`
-  )
-  .catch(err => {
-    log.fatal(err);
-    process.exit(1);
-  });
+const url =
+  "https://kart.miljodirektoratet.no/arcgis/rest/services/vern/MapServer/0/query?where=1=1&outfields=*&f=geojson";
+
+const cmd = `ogr2ogr data/naturvern.geojson "${url}"`;
+log.info(cmd);
+execSync(cmd);
