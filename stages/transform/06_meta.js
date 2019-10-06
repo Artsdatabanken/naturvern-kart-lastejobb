@@ -11,4 +11,4 @@ vo.features.forEach(v => {
   r.push(node);
 });
 
-io.skrivBuildfil("naturvernområde_meta.json", r);
+io.skrivBuildfil("type.json", r);
