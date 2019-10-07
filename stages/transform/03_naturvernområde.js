@@ -1,6 +1,6 @@
 const { io, json } = require("lastejobb");
 
-let vo = io.lesDatafil("naturvern.geojson");
+let vo = io.lesDatafil("kildedata.4326.geojson");
 let verneområder = vo.features;
 if (vo.features.length < 2500)
   throw new Error(
