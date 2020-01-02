@@ -1,18 +1,22 @@
 const { io, json } = require("lastejobb");
 
-let vo = io.lesDatafil("kildedata.4326.geojson");
-let verneområder = vo.features;
-if (vo.features.length < 2500)
+let linjer = io
+  .lesDataRå("kildedata.4326.geojsonl")
+  .toString()
+  .trim()
+  .split("\n");
+if (linjer.length < 2500)
   throw new Error(
-    "Nedlastet fil mangler data, har bare " + verneområder.length + " områder"
+    "Nedlastet fil mangler data, har bare " + linjer.length + " områder"
   );
-verneområder = verneområder.map(vo => {
+linjer = linjer.map(linje => {
+  const vo = JSON.parse(linje);
   vo.properties = { id: vo.properties.naturvernId };
   delete vo.id;
   return vo;
 });
 
-const voo = verneområder.reduce((acc, vo) => {
+const voo = linjer.reduce((acc, vo) => {
   const key = vo.properties.id;
   if (!acc[key]) {
     acc[key] = vo;
@@ -23,6 +27,7 @@ const voo = verneområder.reduce((acc, vo) => {
   return acc;
 }, {});
 
+const vo = { type: "FeatureCollection", name: "naturvernområde_4326" };
 vo.features = json.objectToArray(voo);
 
 io.skrivDatafil("naturvernområde_4326.geojson", vo);
