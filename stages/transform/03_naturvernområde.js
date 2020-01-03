@@ -27,7 +27,7 @@ const voo = linjer.reduce((acc, vo) => {
   return acc;
 }, {});
 
-const vo = { type: "FeatureCollection", name: "naturvernområde_4326" };
+const vo = { type: "FeatureCollection", name: "polygons" };
 vo.features = json.objectToArray(voo);
 
 io.skrivDatafil("naturvernområde_4326.geojson", vo);
