@@ -12,8 +12,7 @@ function map(srcPath, navn) {
     );
     const id = parseInt(f.properties.id.substring(2));
     const props = f.properties;
-    props.kode = id.toString();
-    props.code = "VV-" + id;
+    props.kode = "VV-" + id;
   });
   geo.features.sort((a, b) => (a.properties.id > b.properties.id ? 1 : -1));
   const dstPath = navn + ".geojson";
