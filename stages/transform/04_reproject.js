@@ -1,5 +1,6 @@
 const { processes } = require("lastejobb");
 
+return
 reproject("naturvernområde_4326.geojson", "naturvernområde_25833.geojson");
 
 function reproject(src, target, epsg = "EPSG:25833") {

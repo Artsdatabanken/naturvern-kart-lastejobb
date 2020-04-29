@@ -1,7 +1,7 @@
 const { geospatial, io, json } = require("lastejobb");
 
-const meta = io.lesDatafil("meta.json");
-let vo = io.lesDatafil("naturvernområde_4326.geojson");
+const meta = io.lesTempJson("meta.json");
+let vo = io.lesTempJson("naturvernområde_4326.geojson");
 
 const r = [];
 vo.features.forEach(v => {

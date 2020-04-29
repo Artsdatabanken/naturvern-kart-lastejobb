@@ -1,10 +1,10 @@
 var PolygonLookup = require("polygon-lookup");
 const { geospatial, io, log } = require("lastejobb");
 
-const kommuner = io.lesDatafil("kommune.geojson");
+const kommuner = io.lesTempJson("kommune.geojson");
 var lookup = new PolygonLookup(kommuner);
 
-let vo = io.lesDatafil("naturvernområde_25833.geojson");
+let vo = io.lesTempJson("naturvernområde_25833.geojson");
 
 let treff = 0;
 manglerKommune = [];

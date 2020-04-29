@@ -4,7 +4,7 @@ map("naturvernområde_4326_simple.geojson", "polygon.4326");
 map("naturvernområde_25833_simple.geojson", "polygon.25833");
 
 function map(srcPath, navn) {
-  const geo = io.lesDatafil(srcPath);
+  const geo = io.lesTempJson(srcPath);
   geo.features.forEach(f => {
     f.geometry.coordinates = reducePrecision(
       f.geometry.coordinates,
