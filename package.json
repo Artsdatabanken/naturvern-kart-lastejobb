@@ -1,8 +1,8 @@
 {
   "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
   "dependencies": {
-    "lastejobb": "^2.20.0",
-    "polygon-lookup": "^2.5.0"
+    "lastejobb": "^3.5.1",
+    "polygon-lookup": "^2.6.0"
   },
   "description": "",
   "homepage": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb",
@@ -11,8 +11,8 @@
   "main": "index.js",
   "name": "naturvern-kart-lastejobb",
   "scripts": {
-    "download": "node index download",
-    "transform": "node index transform",
+    "download": "node node_modules/lastejobb/lastejobb stages/download",
+    "transform": "node node_modules/lastejobb/lastejobb stages/transform",
     "build": "npm run download && npm run transform",
     "test": "node node_modules/.bin/jest",
     "deploy": "node index deploy"
