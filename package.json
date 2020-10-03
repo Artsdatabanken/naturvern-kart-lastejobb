@@ -1,7 +1,7 @@
 {
   "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
   "dependencies": {
-    "lastejobb": "^3.7.2",
+    "lastejobb": "^3.7.3",
     "polygon-lookup": "^2.6.0"
   },
   "description": "",
@@ -15,7 +15,7 @@
     "transform": "node node_modules/lastejobb/lastejobb stages/transform",
     "build": "npm run download && npm run transform",
     "test": "node node_modules/.bin/jest",
-    "deploy": "node index deploy"
+    "deploy": "node node_modules/lastejobb/lastejobb stages/deploy"
   },
   "version": "1.0.0"
 }
