@@ -1,7 +1,7 @@
 const { io } = require("lastejobb");
 
-map("naturvernområde_4326_simple.geojson", "polygon.4326");
-map("naturvernområde_25833_simple.geojson", "polygon.25833");
+map("naturvernområde_4326.geojson", "polygon.4326");
+map("naturvernområde_25833.geojson", "polygon.25833");
 
 function map(srcPath, navn) {
   const geo = io.lesTempJson(srcPath);
