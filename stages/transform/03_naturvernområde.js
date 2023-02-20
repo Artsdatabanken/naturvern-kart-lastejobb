@@ -1,4 +1,4 @@
-const { io, json } = require("lastejobb");
+const { io, json } = require("@artsdatabanken/lastejobb");
 
 let linjer = io
   .lesDataRå("kildedata.4326.geojsonl")

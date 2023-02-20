@@ -1,5 +1,5 @@
 var PolygonLookup = require("polygon-lookup");
-const { geospatial, io, log } = require("lastejobb");
+const { geospatial, io, log } = require("@artsdatabanken/lastejobb");
 
 const kommuner = io.lesTempJson("kommune.geojson");
 var lookup = new PolygonLookup(kommuner);

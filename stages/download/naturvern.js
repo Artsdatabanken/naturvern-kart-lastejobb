@@ -1,4 +1,4 @@
-const { io, wfs } = require("lastejobb");
+const { io, wfs } = require("@artsdatabanken/lastejobb");
 
 const options = { batchSize: 900, offset: 0 }
 const url =

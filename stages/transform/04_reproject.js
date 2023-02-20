@@ -1,4 +1,4 @@
-const { processes } = require("lastejobb");
+const { processes } = require("@artsdatabanken/lastejobb");
 
 return
 reproject("naturvernområde_4326.geojson", "naturvernområde_25833.geojson");

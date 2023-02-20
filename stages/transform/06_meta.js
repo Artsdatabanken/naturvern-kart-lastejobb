@@ -1,4 +1,4 @@
-const { geospatial, io, json } = require("lastejobb");
+const { geospatial, io, json } = require("@artsdatabanken/lastejobb");
 
 const meta = io.lesTempJson("meta.json");
 let vo = io.lesTempJson("naturvernområde_4326.geojson");

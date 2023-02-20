@@ -1,4 +1,4 @@
-const { io } = require("lastejobb");
+const { io } = require("@artsdatabanken/lastejobb");
 
 map("naturvernområde_4326.geojson", "polygon.4326");
 map("naturvernområde_25833.geojson", "polygon.25833");
