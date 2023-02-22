@@ -1,31 +1,39 @@
 var PolygonLookup = require("polygon-lookup");
 const { geospatial, io, log } = require("@artsdatabanken/lastejobb");
+try{
+  //task_05();
+}catch(e){
+  console.error(e);
+  console.error(e.stack);
+}
 
-const kommuner = io.lesTempJson("kommune.geojson");
-var lookup = new PolygonLookup(kommuner);
+function task_05(){// : void
+  const kommuner = io.lesTempJson("kommune.geojson");
+  var lookup = new PolygonLookup(kommuner);
 
-let vo = io.lesTempJson("naturvernområde_25833.geojson");
+  let vo = io.lesTempJson("naturvernområde_25833.geojson");
 
-let treff = 0;
-manglerKommune = [];
-let r = {};
-vo.features.forEach(v => {
-  v.properties = { id: v.properties.id };
-  const kommuner = finnOverlappendeKommuner(v.geometry);
-  const fylker = finnFylker(kommuner);
-  if (kommuner.length <= 0) manglerKommune.push(v.properties.id);
-  const areal = Math.round(geospatial.calculateArea(v.geometry.coordinates));
-  const bbox = geospatial.axisAlignedBoundingBox(v.geometry.coordinates);
-  r[v.properties.id] = { id: v.properties.id, kommuner, fylker, areal, bbox };
-});
-
-const total = Object.keys(vo).length;
-if (treff < total)
+  let treff = 0;
+  manglerKommune = [];
+  let r = {};
+  vo.features.forEach(v => {
+    v.properties = { id: v.properties.id };
+    const kommuner = finnOverlappendeKommuner(v.geometry,treff, lookup);
+    const fylker = finnFylker(kommuner);
+    if (kommuner.length <= 0) manglerKommune.push(v.properties.id);
+    const areal = Math.round(geospatial.calculateArea(v.geometry.coordinates));
+    const bbox = geospatial.axisAlignedBoundingBox(v.geometry.coordinates);
+    r[v.properties.id] = { id: v.properties.id, kommuner, fylker, areal, bbox };
+  });
+  const total = Object.keys(vo).length;
+  if (treff < total)
   log.info(`${total - treff} områder ligger utenfor alle kommuner`);
+  
+  io.skrivDatafil("meta.json", r);
+}
 
-io.skrivDatafil("meta.json", r);
 
-function finnOverlappendeKommuner(geometry) {
+function finnOverlappendeKommuner(geometry,treff, lookup) {
   let nater = geometry.coordinates;
   while (Array.isArray(nater[0][0])) nater = nater[0];
 
