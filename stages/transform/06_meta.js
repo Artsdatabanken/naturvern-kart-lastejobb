@@ -4,8 +4,8 @@ try{
   //task_06();
   console.log("(skipping 06)");
 }catch(e){
-  log.error(e);
-  log.error(e.stack);
+  console.error(e);
+  console.error(e.stack);
 }
 
 
