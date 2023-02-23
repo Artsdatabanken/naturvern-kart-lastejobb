@@ -1,8 +1,8 @@
 const { geospatial, io, json } = require("@artsdatabanken/lastejobb");
 
 try{
-  //task_06();
-  console.log("(skipping 06)");
+  task_06();
+  //console.log("(skipping 06)");
 }catch(e){
   console.error(e);
   console.error(e.stack);

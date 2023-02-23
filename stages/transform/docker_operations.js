@@ -11,7 +11,8 @@ var docker_ops = {
         return name+d;
     },
     start_ogr_containerNImage: function (name){// : void
-        let cmd = `docker run --name ${name} -di --restart unless-stopped -v $PWD/temp/:/tmp:rw osgeo/gdal:alpine-normal-latest`
+        let tempPath=process.env.PWD + '/temp/';
+        let cmd = `docker run --name ${name} -di --restart unless-stopped -v ${tempPath}:/tmp:rw osgeo/gdal:alpine-normal-latest`
         this.run_in_shell(cmd);
         console.log(name);
         return name;

@@ -1,7 +1,7 @@
 var PolygonLookup = require("polygon-lookup");
 const { geospatial, io, log } = require("@artsdatabanken/lastejobb");
 try{
-  //task_05();
+  task_05();
 }catch(e){
   console.error(e);
   console.error(e.stack);

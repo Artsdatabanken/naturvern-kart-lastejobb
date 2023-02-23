@@ -1,6 +1,6 @@
 const { io, json } = require("@artsdatabanken/lastejobb");
 try{
-  //tasks();
+  tasks();
 }catch(e){
   log.error(e);
   log.error(e.stack);
