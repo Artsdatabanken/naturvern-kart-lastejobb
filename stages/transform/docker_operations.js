@@ -1,4 +1,3 @@
-const { processes } = require("@artsdatabanken/lastejobb");
 const execSync = require("child_process").execSync;
 
 var docker_ops = {

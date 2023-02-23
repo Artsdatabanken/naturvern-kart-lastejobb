@@ -6,8 +6,10 @@ try{
   var n = dops.start_ogr_containerNImage(dops.create_container_name('nkl-image'));
   //simplify naturvernområde_25833
   return reproj_w_docker(n, "naturvernområde_4326.geojson", "naturvernområde_25833.geojson");
+  dops.clean_container(n);
 }catch(e){
   console.error(e);
+  console.error(e.stack);
 }
 function reproject(src, target, epsg = "EPSG:25833") {
   processes.exec(
