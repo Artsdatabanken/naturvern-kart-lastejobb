@@ -1,13 +1,13 @@
 {
   "author": "Bjorn Reppen <bjreppen@gmail.com> (https://github.com/bjornreppen)",
   "dependencies": {
-    "@artsdatabanken/lastejobb": "^4.0.4",
+    "@artsdatabanken/lastejobb": "^4.0.5",
     "polygon-lookup": "^2.6.0"
   },
   "description": "",
   "homepage": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb",
   "keywords": [],
-  "license": "MIT",
+"license": "MIT",
   "main": "index.js",
   "name": "naturvern-kart-lastejobb",
   "scripts": {
