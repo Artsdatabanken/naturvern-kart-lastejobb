@@ -1,0 +1,353 @@
+{
+  "items": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+      "items": {
+        "items": {
+          "properties": {
+            "areal": {
+              "type": "number"
+            },
+            "bbox": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "fylker": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "id": {
+              "type": "string"
+            },
+            "kode": {
+              "type": "string"
+            },
+            "kommuner": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "areal",
+            "bbox",
+            "fylker",
+            "id",
+            "kode",
+            "kommuner"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "meta": {
+        "properties": {
+          "elementer": {
+            "type": "number"
+          },
+          "produsertUtc": {
+            "type": "string"
+          },
+          "source": {
+            "items": {
+              "properties": {
+                "elementer": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "produsertUtc": {
+                  "type": "string"
+                },
+                "source": {
+                  "items": {
+                    "properties": {
+                      "elementer": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "produsertUtc": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "items": {
+                          "properties": {
+                            "elementer": {
+                              "type": "number"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "produsertUtc": {
+                              "type": "string"
+                            },
+                            "source": {
+                              "items": {
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "name"
+                                ],
+                                "type": "object"
+                              },
+                              "type": "array"
+                            },
+                            "tittel": {
+                              "type": "string"
+                            },
+                            "tool": {
+                              "properties": {
+                                "commit": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            "url": {
+                              "type": "null"
+                            },
+                            "utgiver": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "tittel",
+                            "produsertUtc",
+                            "utgiver",
+                            "url",
+                            "tool",
+                            "elementer",
+                            "source"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "tittel": {
+                        "type": "string"
+                      },
+                      "tool": {
+                        "properties": {
+                          "commit": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "url": {
+                        "type": "null"
+                      },
+                      "utgiver": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "tittel",
+                      "produsertUtc",
+                      "utgiver",
+                      "url",
+                      "tool",
+                      "elementer",
+                      "source"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "tittel": {
+                  "type": "string"
+                },
+                "tool": {
+                  "properties": {
+                    "commit": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "url": {
+                  "type": "null"
+                },
+                "utgiver": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "tittel",
+                "produsertUtc",
+                "utgiver",
+                "url",
+                "tool",
+                "elementer",
+                "source"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "tittel": {
+            "type": "string"
+          },
+          "tool": {
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "null"
+              }
+            },
+            "type": "object"
+          },
+          "url": {
+            "type": "null"
+          },
+          "utgiver": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "type": "object"
+  },
+  "meta": {
+    "tittel": "Type.schema",
+    "produsertUtc": "2023-02-24T09:46:33.023Z",
+    "utgiver": "Artsdatabanken",
+    "url": null,
+    "tool": {
+      "name": "@artsdatabanken/lastejobb",
+      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+    },
+    "elementer": 3,
+    "source": [
+      {
+        "name": "meta.json",
+        "tittel": "Meta",
+        "produsertUtc": "2023-02-24T09:46:31.717Z",
+        "utgiver": "Artsdatabanken",
+        "url": null,
+        "tool": {
+          "name": "@artsdatabanken/lastejobb",
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+        },
+        "elementer": 3334,
+        "source": [
+          {
+            "name": "kommune.geojson",
+            "tittel": "Kommune",
+            "produsertUtc": "2022-04-04T11:02:32.930Z",
+            "utgiver": "Artsdatabanken",
+            "url": null,
+            "tool": {
+              "name": "kommune-kart-lastejobb",
+              "url": "https://github.com/Artsdatabanken/kommune-kart-lastejobb",
+              "commit": "https://github.com/Artsdatabanken/kommune-kart-lastejobb.git/master/baefbadd59301c21ea0efe2e65c08c43ed3f6d3d"
+            },
+            "elementer": 363,
+            "source": [
+              {
+                "name": "fylke_25833.geojson",
+                "tittel": "Fylke",
+                "produsertUtc": "2022-04-04T11:01:44.957Z",
+                "utgiver": "Artsdatabanken",
+                "url": null,
+                "tool": {
+                  "name": "kommune-kart-lastejobb",
+                  "url": "https://github.com/Artsdatabanken/kommune-kart-lastejobb",
+                  "commit": "https://github.com/Artsdatabanken/kommune-kart-lastejobb.git/master/baefbadd59301c21ea0efe2e65c08c43ed3f6d3d"
+                },
+                "elementer": 11,
+                "source": [
+                  {
+                    "name": "Basisdata_0000_Norge_25833_Fylker_GeoJSON.geojson"
+                  }
+                ]
+              },
+              {
+                "name": "kommune_25833.geojson",
+                "tittel": "Kommune",
+                "produsertUtc": "2022-04-04T11:02:32.930Z",
+                "utgiver": "Artsdatabanken",
+                "url": null,
+                "tool": {
+                  "name": "kommune-kart-lastejobb",
+                  "url": "https://github.com/Artsdatabanken/kommune-kart-lastejobb",
+                  "commit": "https://github.com/Artsdatabanken/kommune-kart-lastejobb.git/master/baefbadd59301c21ea0efe2e65c08c43ed3f6d3d"
+                },
+                "elementer": 363,
+                "source": [
+                  {
+                    "name": "Basisdata_0000_Norge_25833_Fylker_GeoJSON.geojson"
+                  },
+                  {
+                    "name": "Basisdata_0000_Norge_25833_Kommuner_GeoJSON.geojson"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "naturvernområde_25833.geojson",
+            "tittel": "Naturvernområde 4326",
+            "produsertUtc": "2023-02-24T09:45:57.433Z",
+            "utgiver": "Artsdatabanken",
+            "url": null,
+            "tool": {
+              "name": "@artsdatabanken/lastejobb",
+              "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+            },
+            "elementer": 3334,
+            "source": []
+          }
+        ]
+      },
+      {
+        "name": "naturvernområde_4326.geojson",
+        "tittel": "Naturvernområde 4326",
+        "produsertUtc": "2023-02-24T09:45:57.433Z",
+        "utgiver": "Artsdatabanken",
+        "url": null,
+        "tool": {
+          "name": "@artsdatabanken/lastejobb",
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+        },
+        "elementer": 3334,
+        "source": []
+      }
+    ]
+  }
+}
