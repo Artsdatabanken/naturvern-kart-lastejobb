@@ -1,5 +1,5 @@
-
-var dops = require("./docker_operations");
+const { processes, dops} = require("@artsdatabanken/lastejobb");
+//var dops = require("./docker_operations");
 
 main();
 
