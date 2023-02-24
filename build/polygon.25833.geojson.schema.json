@@ -1,0 +1,195 @@
+{
+  "items": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+      "crs": {
+        "properties": {
+          "properties": {
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "features": {
+        "items": {
+          "properties": {
+            "geometry": {
+              "properties": {
+                "coordinates": {
+                  "items": {
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "properties": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "kode": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "properties",
+            "geometry"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "items": {
+        "type": "null"
+      },
+      "meta": {
+        "properties": {
+          "elementer": {
+            "type": "number"
+          },
+          "produsertUtc": {
+            "type": "string"
+          },
+          "source": {
+            "items": {
+              "properties": {
+                "elementer": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "produsertUtc": {
+                  "type": "string"
+                },
+                "source": {
+                  "items": {},
+                  "type": "array"
+                },
+                "tittel": {
+                  "type": "string"
+                },
+                "tool": {
+                  "properties": {
+                    "commit": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "url": {
+                  "type": "null"
+                },
+                "utgiver": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "tittel",
+                "produsertUtc",
+                "utgiver",
+                "url",
+                "tool",
+                "elementer",
+                "source"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "tittel": {
+            "type": "string"
+          },
+          "tool": {
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "url": {
+            "type": "null"
+          },
+          "utgiver": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "meta": {
+    "tittel": "Polygon.25833.geojson.schema",
+    "produsertUtc": "2023-02-24T09:47:12.803Z",
+    "utgiver": "Artsdatabanken",
+    "url": null,
+    "tool": {
+      "name": "@artsdatabanken/lastejobb",
+      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+    },
+    "elementer": 3,
+    "source": [
+      {
+        "name": "naturvernområde_4326.geojson",
+        "tittel": "Naturvernområde 4326",
+        "produsertUtc": "2023-02-24T09:45:57.433Z",
+        "utgiver": "Artsdatabanken",
+        "url": null,
+        "tool": {
+          "name": "@artsdatabanken/lastejobb",
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+        },
+        "elementer": 3334,
+        "source": []
+      },
+      {
+        "name": "naturvernområde_25833.geojson",
+        "tittel": "Naturvernområde 4326",
+        "produsertUtc": "2023-02-24T09:45:57.433Z",
+        "utgiver": "Artsdatabanken",
+        "url": null,
+        "tool": {
+          "name": "@artsdatabanken/lastejobb",
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+        },
+        "elementer": 3334,
+        "source": []
+      }
+    ]
+  }
+}
