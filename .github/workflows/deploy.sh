@@ -9,6 +9,6 @@ echo "Create archive"
 tar --directory=naturvern -zcf naturvern.tar.gz .
 
 echo "Send archive to host"
-sshpass -p $scp_pass scp -v -o StrictHostKeyChecking=no naturvern.tar.gz $scp_user@$scp_dest/
+sshpass -p ${{ scp_pass }} scp -v -o StrictHostKeyChecking=no naturvern.tar.gz  ${{ $scp_user }}@${{ $scp_dest }}/
 
-curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' $slackaddy
+curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' ${{ secrets.POST_SLACK }}
