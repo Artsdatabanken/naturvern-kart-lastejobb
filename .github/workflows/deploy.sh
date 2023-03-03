@@ -12,4 +12,4 @@ tar --directory=naturvern -zcf naturvern.tar.gz .
 echo "Send archive to host"
 #sshpass -p $1 scp -v -o StrictHostKeyChecking=no naturvern.tar.gz  $2@$3/
 
-curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' $4
+curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' $1
