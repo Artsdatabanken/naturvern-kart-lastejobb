@@ -18343,11 +18343,11 @@
       ]
     },
     {
-      "areal": 906289,
+      "areal": 907218,
       "bbox": [
         17.127770093102257,
-        68.45591031616729,
-        17.241159989580442,
+        68.4559177458701,
+        17.24113744510468,
         68.46501932294353
       ],
       "fylker": [
@@ -19635,12 +19635,12 @@
       ]
     },
     {
-      "areal": 212183,
+      "areal": 212750,
       "bbox": [
-        12.436391835641718,
-        65.1370003121206,
-        12.461004820335905,
-        65.14054712471474
+        12.436421318966136,
+        65.13691915659727,
+        12.461014844654386,
+        65.14054611548806
       ],
       "fylker": [
         "18"
@@ -22553,11 +22553,11 @@
       ]
     },
     {
-      "areal": 211198,
+      "areal": 211168,
       "bbox": [
         12.516263843355112,
         65.38481148900485,
-        12.525514350527871,
+        12.525513713971556,
         65.39319709852028
       ],
       "fylker": [
@@ -26370,7 +26370,7 @@
       "areal": 2223957,
       "bbox": [
         12.583390725457937,
-        65.37037073953557,
+        65.37037082918268,
         12.639228363736144,
         65.38983737413116
       ],
@@ -32624,7 +32624,7 @@
       ]
     },
     {
-      "areal": 1341494,
+      "areal": 1341495,
       "bbox": [
         15.659801941457557,
         68.16032867555597,
@@ -36356,7 +36356,7 @@
       ]
     },
     {
-      "areal": 142265,
+      "areal": 142264,
       "bbox": [
         13.64317965560005,
         66.20798393453668,
@@ -37687,11 +37687,11 @@
       ]
     },
     {
-      "areal": 450925,
+      "areal": 251951,
       "bbox": [
         13.797204029496289,
-        66.13636217364159,
-        13.843088101474534,
+        66.16285843987774,
+        13.814344751868559,
         66.16852954501276
       ],
       "fylker": [
@@ -38677,12 +38677,12 @@
       ]
     },
     {
-      "areal": 2621857,
+      "areal": 2613822,
       "bbox": [
-        14.048268882155933,
-        65.49220911419091,
-        14.111199307155017,
-        65.50886396592013
+        14.048355916167129,
+        65.49230390514192,
+        14.11123420834451,
+        65.50883370486171
       ],
       "fylker": [
         "18"
@@ -38762,12 +38762,12 @@
       ]
     },
     {
-      "areal": 11241634,
+      "areal": 11220371,
       "bbox": [
-        14.14330614954398,
-        65.43864113534649,
-        14.260364954538925,
-        65.47953733760404
+        14.143280986434434,
+        65.43864985335338,
+        14.260341394697132,
+        65.47955858303106
       ],
       "fylker": [
         "18"
@@ -57256,24 +57256,24 @@
   ],
   "meta": {
     "tittel": "Type",
-    "produsertUtc": "2023-02-24T09:46:32.985Z",
+    "produsertUtc": "2023-03-03T09:53:50.175Z",
     "utgiver": "Artsdatabanken",
     "url": null,
     "tool": {
       "name": "@artsdatabanken/lastejobb",
-      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
     },
     "elementer": 3334,
     "source": [
       {
         "name": "meta.json",
         "tittel": "Meta",
-        "produsertUtc": "2023-02-24T09:46:31.717Z",
+        "produsertUtc": "2023-03-03T09:53:49.147Z",
         "utgiver": "Artsdatabanken",
         "url": null,
         "tool": {
           "name": "@artsdatabanken/lastejobb",
-          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
         },
         "elementer": 3334,
         "source": [
@@ -57334,12 +57334,12 @@
           {
             "name": "naturvernområde_25833.geojson",
             "tittel": "Naturvernområde 4326",
-            "produsertUtc": "2023-02-24T09:45:57.433Z",
+            "produsertUtc": "2023-03-03T09:53:15.731Z",
             "utgiver": "Artsdatabanken",
             "url": null,
             "tool": {
               "name": "@artsdatabanken/lastejobb",
-              "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+              "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
             },
             "elementer": 3334,
             "source": []
@@ -57349,12 +57349,12 @@
       {
         "name": "naturvernområde_4326.geojson",
         "tittel": "Naturvernområde 4326",
-        "produsertUtc": "2023-02-24T09:45:57.433Z",
+        "produsertUtc": "2023-03-03T09:53:15.731Z",
         "utgiver": "Artsdatabanken",
         "url": null,
         "tool": {
           "name": "@artsdatabanken/lastejobb",
-          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
         },
         "elementer": 3334,
         "source": []

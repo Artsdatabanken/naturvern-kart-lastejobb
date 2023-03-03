@@ -245,24 +245,24 @@
   },
   "meta": {
     "tittel": "Type.schema",
-    "produsertUtc": "2023-02-24T09:46:33.023Z",
+    "produsertUtc": "2023-03-03T09:53:50.213Z",
     "utgiver": "Artsdatabanken",
     "url": null,
     "tool": {
       "name": "@artsdatabanken/lastejobb",
-      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+      "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
     },
     "elementer": 3,
     "source": [
       {
         "name": "meta.json",
         "tittel": "Meta",
-        "produsertUtc": "2023-02-24T09:46:31.717Z",
+        "produsertUtc": "2023-03-03T09:53:49.147Z",
         "utgiver": "Artsdatabanken",
         "url": null,
         "tool": {
           "name": "@artsdatabanken/lastejobb",
-          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
         },
         "elementer": 3334,
         "source": [
@@ -323,12 +323,12 @@
           {
             "name": "naturvernområde_25833.geojson",
             "tittel": "Naturvernområde 4326",
-            "produsertUtc": "2023-02-24T09:45:57.433Z",
+            "produsertUtc": "2023-03-03T09:53:15.731Z",
             "utgiver": "Artsdatabanken",
             "url": null,
             "tool": {
               "name": "@artsdatabanken/lastejobb",
-              "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+              "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
             },
             "elementer": 3334,
             "source": []
@@ -338,12 +338,12 @@
       {
         "name": "naturvernområde_4326.geojson",
         "tittel": "Naturvernområde 4326",
-        "produsertUtc": "2023-02-24T09:45:57.433Z",
+        "produsertUtc": "2023-03-03T09:53:15.731Z",
         "utgiver": "Artsdatabanken",
         "url": null,
         "tool": {
           "name": "@artsdatabanken/lastejobb",
-          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/349787cd26df2269451368f80f8613add744a58f"
+          "commit": "https://github.com/Artsdatabanken/naturvern-kart-lastejobb.git/master/fe870304dfe2d15e35d9c344479c3b9e15454898"
         },
         "elementer": 3334,
         "source": []
