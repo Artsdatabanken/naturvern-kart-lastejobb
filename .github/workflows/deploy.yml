@@ -3,6 +3,8 @@ name: build and publish polygons to data.artsdatabanken.no
 on:
   push:
     branches: [ master ]
+    tags:
+      - '*'
 
 jobs:
   build:
