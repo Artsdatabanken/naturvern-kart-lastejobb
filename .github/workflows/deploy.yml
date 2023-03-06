@@ -30,7 +30,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "naturvern/*"
-          tag: ${{ GITHUB_SHA }}
+          tag: ${{ env.GITHUB_SHA }}
       - name: post to slack
         run: ./.github/workflows/slack.sh ${{ secrets.POST_SLACK }}
         shell: bash
