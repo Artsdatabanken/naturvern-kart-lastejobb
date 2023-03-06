@@ -21,11 +21,6 @@ jobs:
       - name: Run deployment script
         run: ./.github/workflows/deploy.sh 
         shell: bash
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with: 
-          name: naturvern
-          path: naturvern
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
