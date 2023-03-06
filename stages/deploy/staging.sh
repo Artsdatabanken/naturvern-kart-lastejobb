@@ -1,3 +1,4 @@
+#Only works from local machine
 set -e
 
 echo Deploy polygon_med_undertyper.4326.geojson 
