@@ -4,5 +4,3 @@ mkdir naturvern
 cp build/polygon.4326.geojson naturvern/polygon_med_undertyper.4326.geojson
 cp build/polygon.25833.geojson naturvern/polygon_med_undertyper.25833.geojson
 cp temp/kildedata.4326.geojsonl naturvern/
-
-curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' $1

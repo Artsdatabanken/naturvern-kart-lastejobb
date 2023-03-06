@@ -19,10 +19,16 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - name: Run deployment script
-        run: ./.github/workflows/deploy.sh ${{ secrets.POST_SLACK }}
+        run: ./.github/workflows/deploy.sh 
         shell: bash
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with: 
           name: naturvern
           path: naturvern
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "naturvern/*"
+      - name: Slackit
+        run: curl -X POST -H 'Content-type: application/json' --data '{"text":"deploy naturvern-kart-lastejobb"}' ${{ secrets.POST_SLACK }}
