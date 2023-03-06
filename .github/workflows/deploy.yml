@@ -16,8 +16,6 @@ jobs:
           node-version: '18.x'
       - name: install sshpass
         run: sudo apt-get install -y sshpass
-      - name: Get tag
-        uses: pr-mpt/actions-commit-hash@v2
       - run: npm ci
       - run: npm run build --if-present
       - name: Run deployment script
@@ -32,7 +30,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "naturvern/*"
-          tag: ${{ steps.commit.outputs.short }} 
+          tag: ${{ GITHUB_SHA }}
       - name: post to slack
         run: ./.github/workflows/slack.sh ${{ secrets.POST_SLACK }}
         shell: bash
