@@ -35,6 +35,6 @@ jobs:
           path: './destinationRepo'
       - name: Copy files to destinationRepo
         run: | 
-            cp ../../build/polygon_med_undertyper.25833.geojson destinationRepo/
-            cp ../../build/polygon_med_undertyper.4326.geojson destinationRepo/
-            cp ../../build/kildedata.4326.geojsonl destinationRepo/
+            cp ./build/polygon_med_undertyper.25833.geojson destinationRepo/
+            cp ./build/polygon_med_undertyper.4326.geojson destinationRepo/
+            cp ./build/kildedata.4326.geojsonl destinationRepo/
