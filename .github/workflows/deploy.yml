@@ -37,6 +37,6 @@ jobs:
         run: | 
             echo "Where are we?"
             ls -l 
-            cp build/polygon_med_undertyper.25833.geojson destinationRepo/
-            cp build/polygon_med_undertyper.4326.geojson destinationRepo/
-            cp build/kildedata.4326.geojsonl destinationRepo/
+            cp naturvern/polygon_med_undertyper.25833.geojson destinationRepo/
+            cp naturvern/polygon_med_undertyper.4326.geojson destinationRepo/
+            cp naturvern/kildedata.4326.geojsonl destinationRepo/
