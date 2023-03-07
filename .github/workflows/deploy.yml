@@ -16,6 +16,11 @@ jobs:
           node-version: '18.x'
       - run: npm ci
       - run: npm run build --if-present
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: artsdatabanken/naturvern-kart
+          path: './destinationRepo'
       - name: Run deployment script
         run: ./.github/workflows/deploy.sh 
         shell: bash
@@ -27,16 +32,3 @@ jobs:
       - name: post to slack
         run: ./.github/workflows/slack.sh ${{ secrets.POST_SLACK }}
         shell: bash
-      - uses: actions/checkout@v3
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          repository: artsdatabanken/naturvern-kart
-          path: './destinationRepo'
-      - name: Copy files to destinationRepo
-        run: | 
-            echo "Where are we?"
-            ls -l 
-            cp naturvern/polygon_med_undertyper.25833.geojson destinationRepo/
-            cp naturvern/polygon_med_undertyper.4326.geojson destinationRepo/
-            cp naturvern/kildedata.4326.geojsonl destinationRepo/
