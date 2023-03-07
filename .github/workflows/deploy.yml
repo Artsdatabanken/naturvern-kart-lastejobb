@@ -34,9 +34,7 @@ jobs:
           repository: artsdatabanken/naturvern-kart
           path: './destinationRepo'
       - name: Copy files to destinationRepo
-        uses: actions/github-script@v6
-        with:
-          script: | 
+        run: | 
             cp build/polygon_med_undertyper.25833.geojson destinationRepo/
             cp build/polygon_med_undertyper.4326.geojson destinationRepo/
             cp build/kildedata.4326.geojsonl destinationRepo/
