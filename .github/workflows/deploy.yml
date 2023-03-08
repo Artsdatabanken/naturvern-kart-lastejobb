@@ -32,3 +32,9 @@ jobs:
       - name: post to slack
         run: ./.github/workflows/slack.sh ${{ secrets.POST_SLACK }}
         shell: bash
+      - name: Push to naturvern-kart
+        run: |
+          cd destinationRepo
+          git stage .
+          git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
+        
