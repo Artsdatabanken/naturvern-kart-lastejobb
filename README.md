@@ -78,3 +78,11 @@ Kjører hele lastejobben, først `download`, så `transform`.
 ### Deploy
 
 Tar filene fra `build`-katalogen som er produsert i `build` eller `transform` og publiserer disse offentlig slik at andre lastejobber eller konsumenter kan nå dem uten å kjøre lastejobben.
+
+
+### 08.03.23
+Når byggejobben fullføres opprettes det en release av de tre filene som er nevnt i den historiske "staging.sh", disse hentes ned av et script på hydra, etter at boten har fått melding om at releasen er tilgjengelig. Denne meldingen sendes automatisk, når jobben er fullført. 
+
+I tillegg clones repoet naturvern-kart, filene kopieres hit og disse sjekkes så inn i master og tagges med versjonsnummeret til releasen som er laget under byggejobben. Dette for å sørge for tydelig sporbarhet, om noe skulle skjære seg. 
+
+TODO: Lage jobb og trigge denne, i natuvern-lastejobb, da denne må oppdateres når det er laget nye data her.
