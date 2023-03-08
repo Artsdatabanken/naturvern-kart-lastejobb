@@ -21,6 +21,7 @@ jobs:
         with:
           repository: artsdatabanken/naturvern-kart
           path: './destinationRepo'
+          token: ${{secrets.PUSH_TOKEN}}
       - name: Run deployment script
         run: ./.github/workflows/deploy.sh 
         shell: bash
@@ -41,4 +42,8 @@ jobs:
           git switch -c v_${{ github.run_number }}
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
-          git push --set-upstream origin v_${{ github.run_number }}
+          git branch --set-upstream origin v_${{ github.run_number }}
+          git push https://$USERNAME:$REPO_KEY@github.com/artsdatabanken/naturvern-kart.git
+        env:
+          REPO_KEY: ${{secrets.PUSH_TOKEN}}
+          USERNAME: github-actions[bot]
