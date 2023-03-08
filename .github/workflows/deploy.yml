@@ -37,4 +37,5 @@ jobs:
           cd destinationRepo
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
-        
+          git config --global user.email "even.juberg@artsdatabanken.no"
+          git config --global user.name "Myrdrahl"
