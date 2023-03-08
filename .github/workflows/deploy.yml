@@ -41,9 +41,11 @@ jobs:
           git config --global --list
           git switch -c v_${{ github.run_number }}
           git status
+          echo "remotes"
+          git remote
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
-          git branch --set-upstream-to origin v_${{ github.run_number }}
+          git branch --set-upstream-to v_${{ github.run_number }}
           git push https://$USERNAME:$REPO_KEY@github.com/artsdatabanken/naturvern-kart.git
         env:
           REPO_KEY: ${{secrets.PUSH_TOKEN}}
