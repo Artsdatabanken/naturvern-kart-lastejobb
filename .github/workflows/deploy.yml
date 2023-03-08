@@ -41,3 +41,4 @@ jobs:
           git switch -c v_${{ github.run_number }}
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
+          git push
