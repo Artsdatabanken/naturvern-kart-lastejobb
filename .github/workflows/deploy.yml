@@ -35,7 +35,9 @@ jobs:
       - name: Push to naturvern-kart
         run: |
           cd destinationRepo
+          git config --global --list
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
           git config --global user.email "even.juberg@artsdatabanken.no"
           git config --global user.name "Myrdrahl"
+          git config --global --list
