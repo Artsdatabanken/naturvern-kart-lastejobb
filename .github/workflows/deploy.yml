@@ -40,6 +40,7 @@ jobs:
           git config --global user.email "<>"
           git config --global --list
           git switch -c v_${{ github.run_number }}
+          git status
           git stage .
           git commit -m "Updated from naturvern-kart-lastejobb v_${{ github.run_number }}"
           git branch --set-upstream-to origin v_${{ github.run_number }}
